@@ -5,6 +5,8 @@ export const StatisticsSection = styled.section`
   margin-left: auto;
   margin-right: auto;
   width: 300px;
+  padding: 60px 60px;
+  background-color: blanchedalmond;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 `;
