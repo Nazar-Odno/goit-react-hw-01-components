@@ -1,9 +1,11 @@
 .statistics {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
   width: 650px;
   height: 450px;
   margin: 0 auto;
   margin-top: 30px;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +16,7 @@
   background-color: white;
   border-radius: 10px;
   text-align: center;
+
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
