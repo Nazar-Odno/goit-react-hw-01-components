@@ -6,7 +6,7 @@
 
 .transactionHistory th {
   text-transform: capitalize;
-  background-color: #00bcd4;
+  background-color: lightgray;
   color: white;
   padding: 10px;
 }
