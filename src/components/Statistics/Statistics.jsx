@@ -1,32 +1,22 @@
 import PropTypes from 'prop-types';
-import s from './Statistics.module.css';
-
-const colors = ['#984ED0', '#CDD25A', '#FDB05E', '#0475ED', '#F02C6E'];
+import css from './Statistics.module.css';
+import { getRandomHexColor } from 'components/back/randomColor';
 
 export const Statistics = ({ title, stats }) => {
-  return (
-    <section className={s.statistics}>
-      {title && <h2 className={s.title}>{title}</h2>}
-
-      <ul className={s.list}>
-        {stats.map(({ id, label, percentage }, index) => (
-          <li className={s.item} key={id} style={{ background: colors[index] }}>
-            <span className={s.label}>{label}</span>
-            <span className={s.percentage}>{percentage}</span>
-          </li>
-        ))}
-      </ul>
+    return <section className={css.statistics}>
+        <h2 className={css.title}>{title}</h2>
+        <ul className={css.stList}>
+            {stats.map(stats => (<li className={css.item} key={stats.id} style={{backgroundColor: getRandomHexColor()}}>
+                <span className={css.label}>{stats.label}</span>
+                <span className={css.perc}>{stats.percentage}%</span>
+            </li>))}
+        </ul>
     </section>
-  );
-};
-
-Statistics.propTypes = {
-  title: PropTypes.string,
-  stats: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-      percentage: PropTypes.number.isRequired,
-    }).isRequired
-  ).isRequired,
-};
+}
+Statistics.prototype = {
+    title: PropTypes.string,
+    stats: PropTypes.shape({
+        label: PropTypes.string,
+        parcentage: PropTypes.number,
+    })
+}
